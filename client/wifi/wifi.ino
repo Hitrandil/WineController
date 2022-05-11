@@ -1,8 +1,8 @@
 #include <ESP8266WiFi.h>
 #include <DHT.h>
 
-#define ssid "Vodafone- Minelli Valera"
-#define psw "C.90h@q36GDln*08svrn_"
+#define SSID ${{ secrets.SSID }}
+#define PSW ${{ secrets.WIFIPSW }}
 #define DHTPIN 1
 #define MODEL DHT22
 
@@ -15,7 +15,7 @@ float temp; //Variabile in cui verrà inserita la temperatura
 void setup() {
   // put your setup code here, to run once:
   WiFi.mode(WIFI_STA);
-  WiFi.begin(ssid, psw);
+  WiFi.begin(SSID, PSW);
 
   //Serial.begin(115200);
 

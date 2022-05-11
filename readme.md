@@ -10,5 +10,5 @@ Il programma semplicemente recupera i dati, li invia al tuo server personale per
 
 ### Come l'ho fatto?
 
-Nella documentazione puoi trovare tutto documentato, da come l'ho fatto a come utilizzarlo!
+Nella [documentazione](./docs/project.md) puoi trovare tutto documentato, da come l'ho fatto a come utilizzarlo!
 
