@@ -1,10 +1,7 @@
-import { IsDate, IsNotEmpty, IsNumber, IsString } from "class-validator";
+
+import {Equals, IsNotEmpty, IsNumber, isString, IsString } from "class-validator";
 
 export class LogDto {
-    // @IsDate()
-    // @IsNotEmpty()
-    // timestamp: Date; //todo implementare con orario
-
     @IsNumber()
     @IsNotEmpty()
     temperature: number;
@@ -13,7 +10,7 @@ export class LogDto {
     @IsNotEmpty()
     humidity: number;
 
-    @IsString()
     @IsNotEmpty()
-    hash: string;
+    @IsString()
+    token: string;
 }

@@ -7,6 +7,6 @@ export class DataController {
     constructor(private dataService: DataService){};
     @Post("getLog")
     getLog(@Body() dto: LogDto){
-        return this.dataService.getESPLog(dto);
+        return this.dataService.saveDataOnDB(dto);
     }
 }
