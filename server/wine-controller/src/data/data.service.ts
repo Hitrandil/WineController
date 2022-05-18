@@ -11,6 +11,9 @@ export class DataService {
             throw new BadRequestException("Token errato");
         }
         delete logESP.token;
-        return this.prisma.log.create({data:logESP});
+        return this.prisma.log.create({data:{
+            temperature: Number(logESP.temperature),
+            humidity: Number(logESP.humidity)
+        });
     }
 }
