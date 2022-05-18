@@ -5,15 +5,18 @@ import { LogDto } from './dto';
 
 @Injectable()
 export class DataService {
-    constructor(private prisma: PrismaService, private config: ConfigService){};
-    saveDataOnDB(logESP: LogDto){
-        if (logESP.token!=this.config.get("TOKEN_ESP")){
+    constructor(private prisma: PrismaService, private config: ConfigService) { };
+    saveDataOnDB(logESP: LogDto) {
+        if (logESP.token != this.config.get("TOKEN_ESP")) {
             throw new BadRequestException("Token errato");
         }
         delete logESP.token;
-        return this.prisma.log.create({data:{
-            temperature: Number(logESP.temperature),
-            humidity: Number(logESP.humidity)
+        return this.prisma.log.create({
+            data:
+            {
+                temperature: Number(logESP.temperature),
+                humidity: Number(logESP.humidity)
+            }
         });
     }
 }
