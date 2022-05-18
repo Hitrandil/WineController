@@ -3,10 +3,10 @@ import {Equals, IsNotEmpty, IsNumber, isString, IsString } from "class-validator
 
 export class LogDto {
     @IsNotEmpty()
-    temperature: number;
+    temperature: string;
 
     @IsNotEmpty()
-    humidity: number;
+    humidity: string;
 
     @IsNotEmpty()
     @IsString()
